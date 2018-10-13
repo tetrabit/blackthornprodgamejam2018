@@ -2,22 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
+
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance = null;
 
-    int count = 0;
+    private Player p;
 
     void Awake()
     {
-        if(instance == null)
+        CreateSingleton();
+        GetManagers();
+    }
+
+    private void CreateSingleton()
+    {
+        if (instance == null)
         {
             instance = this;
-            ConsoleProDebug.LogToFilter("test", "rwar");
-            Debug.Log("test");
         }
-        else if(instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -25,17 +30,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start ()
+    private void GetManagers()
     {
-		
-	}
+        p = GetComponent<Player>();
+    }
 
-	void Update ()
-    {
-        count++;
-
-        ConsoleProDebug.Watch("Count", count.ToString());
-
-        //Debug.Log("Player X Position:" + transform.position.x.ToString() + "\nCPAPI:{"cmd":"Watch" "name":"" + "PXPos" + ""}");
-	}
+    public Player Player() { return p; }
 }
