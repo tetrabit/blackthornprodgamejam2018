@@ -7,11 +7,15 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
+    int count = 0;
+
     void Awake()
     {
         if(instance == null)
         {
             instance = this;
+            ConsoleProDebug.LogToFilter("test", "rwar");
+            Debug.Log("test");
         }
         else if(instance != this)
         {
@@ -28,6 +32,10 @@ public class GameManager : MonoBehaviour
 
 	void Update ()
     {
-		
+        count++;
+
+        ConsoleProDebug.Watch("Count", count.ToString());
+
+        //Debug.Log("Player X Position:" + transform.position.x.ToString() + "\nCPAPI:{"cmd":"Watch" "name":"" + "PXPos" + ""}");
 	}
 }
