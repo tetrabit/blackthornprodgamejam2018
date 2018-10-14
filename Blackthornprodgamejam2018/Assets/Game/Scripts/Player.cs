@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 	void Start () 
 	{
         ps = PlayerState.idle;
-        ConsoleProDebug.Watch("Player State", ps.ToString());
     }
 	
 	void Update () 

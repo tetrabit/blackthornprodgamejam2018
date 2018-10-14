@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     private Player p;
+    private PixelGrid pg;
 
     void Awake()
     {
@@ -33,7 +34,9 @@ public class GameManager : MonoBehaviour
     private void GetManagers()
     {
         p = GetComponent<Player>();
+        pg = GetComponent<PixelGrid>();
     }
 
     public Player Player() { return p; }
+    public PixelGrid PixelGrid() { return pg; }
 }
