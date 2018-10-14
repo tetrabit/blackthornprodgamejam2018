@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     private Player p;
     private PixelGrid pg;
+    private ButtonMash bm;
 
     void Awake()
     {
@@ -35,8 +36,10 @@ public class GameManager : MonoBehaviour
     {
         p = GetComponent<Player>();
         pg = GetComponent<PixelGrid>();
+        bm = GetComponent<ButtonMash>();
     }
 
     public Player Player() { return p; }
     public PixelGrid PixelGrid() { return pg; }
+    public ButtonMash ButtomMash() { return bm; }
 }

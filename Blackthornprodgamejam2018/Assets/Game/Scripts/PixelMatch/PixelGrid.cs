@@ -5,6 +5,8 @@ using UnityEditor;
 
 public class PixelGrid : MonoBehaviour
 {
+    public bool StartOnLoad;
+
     public GameObject pixelCube;
     public Transform pixelGridOrigin;
 
@@ -44,8 +46,11 @@ public class PixelGrid : MonoBehaviour
 	void Awake () 
 	{
         amountOfColors = System.Enum.GetNames(typeof(Colors)).Length;
-        SpawnPixelGrid();
-        SpawnColorPicker();
+        if(StartOnLoad)
+        {
+            SpawnPixelGrid();
+            SpawnColorPicker();
+        }
 	}
 
     void Update()
