@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   horizontalRayCount: 4
   verticalRayCount: 4
   horizontalRaySpacing: 0
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 1104848500}
   - component: {fileID: 1104848499}
   - component: {fileID: 1104848498}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 1130738537}
   - component: {fileID: 1130738536}
   - component: {fileID: 1130738535}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 1158684465}
   - component: {fileID: 1158684464}
   - component: {fileID: 1158684463}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 1190114047}
   - component: {fileID: 1190114046}
   - component: {fileID: 1190114045}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 1231537243}
   - component: {fileID: 1231537242}
   - component: {fileID: 1231537241}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 1542389696}
   - component: {fileID: 1542389695}
   - component: {fileID: 1542389694}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 1919517437}
   - component: {fileID: 1919517436}
   - component: {fileID: 1919517435}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 2016384652}
   - component: {fileID: 2016384651}
   - component: {fileID: 2016384650}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Obstacle 2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
