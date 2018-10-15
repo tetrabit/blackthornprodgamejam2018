@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
+[RequireComponent(typeof(PixelGrid))]
+[RequireComponent(typeof(ButtonMash))]
+[RequireComponent(typeof(GoalCompletion))]
+[RequireComponent(typeof(Bugs))]
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +15,8 @@ public class GameManager : MonoBehaviour
     private Player p;
     private PixelGrid pg;
     private ButtonMash bm;
+    private GoalCompletion gc;
+    private Bugs b;
 
     void Awake()
     {
@@ -37,9 +43,13 @@ public class GameManager : MonoBehaviour
         p = GetComponent<Player>();
         pg = GetComponent<PixelGrid>();
         bm = GetComponent<ButtonMash>();
+        gc = GetComponent<GoalCompletion>();
+        b = GetComponent<Bugs>();
     }
 
     public Player Player() { return p; }
     public PixelGrid PixelGrid() { return pg; }
     public ButtonMash ButtomMash() { return bm; }
+    public GoalCompletion GoalCompletion() { return gc; }
+    public Bugs Bugs() { return b; }
 }

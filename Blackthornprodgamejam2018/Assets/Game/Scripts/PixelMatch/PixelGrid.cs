@@ -50,6 +50,7 @@ public class PixelGrid : MonoBehaviour
         {
             SpawnPixelGrid();
             SpawnColorPicker();
+            Resize();
         }
 	}
 
@@ -116,6 +117,11 @@ public class PixelGrid : MonoBehaviour
             colorPicker[i].mat = GetColor((Colors)i);
             StartCoroutine(ChangeColorOnInit(colorPicker[i], GetColor((Colors)i)));
         }
+    }
+
+    public void Resize()
+    {
+        pixelGridOrigin.localScale = new Vector3(0.55f, 0.55f, 0.55f);
     }
 
     private void FindCube(GameObject cube)

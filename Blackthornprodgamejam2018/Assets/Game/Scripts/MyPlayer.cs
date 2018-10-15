@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MyPlayer : MonoBehaviour 
 {
-	
+
+    public GameObject playerObject;
+
 	public enum PlayerState
     {
         idle,
