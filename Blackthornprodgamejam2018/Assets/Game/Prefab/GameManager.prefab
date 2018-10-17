@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114892133736771654}
   - component: {fileID: 114538277161225412}
   - component: {fileID: 114183249259065684}
+  - component: {fileID: 114317242915799404}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -67,6 +68,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
+--- !u!114 &114317242915799404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404134539306386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079125c6fd8ac464d856b9cf75d26d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114538277161225412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cad1e3610f6b954db3a3609314d5817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOnLoad: 0
-  mashBar: {fileID: 1223480714731982, guid: dce26459e285c154fbe0e0b78cd04602, type: 2}
+  startOnLoad: 1
+  mashBar: {fileID: 0}
   mashBarOrigin: {fileID: 0}
   difficultyRamp:
     serializedVersion: 2
@@ -119,6 +131,7 @@ MonoBehaviour:
   maxPoints: 1000
   difficulty: 10
   mashPoints: 500
+  endTime: 15
 --- !u!114 &114747010392801558
 MonoBehaviour:
   m_ObjectHideFlags: 1
