@@ -32,7 +32,7 @@ public class ButtonMash : MonoBehaviour
 	void Start () 
 	{
         if (startOnLoad)
-            Init();
+            Init(mashBar);
 	}
 	
 	void Update () 
@@ -56,6 +56,14 @@ public class ButtonMash : MonoBehaviour
         runUpdate = true;
         startTime = Time.time;
         GameObject holdBar = Instantiate(mashBar, mashBarOrigin);
+        mashBarSlider = holdBar.GetComponent<Slider>();
+    }
+
+    public void Init(GameObject sceneObject)
+    {
+        runUpdate = true;
+        startTime = Time.time;
+        GameObject holdBar = sceneObject;
         mashBarSlider = holdBar.GetComponent<Slider>();
     }
 
