@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114538277161225412}
   - component: {fileID: 114183249259065684}
   - component: {fileID: 114317242915799404}
+  - component: {fileID: 114694197035624864}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -98,7 +99,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 19.98518
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -106,17 +107,35 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 5.001683
-      value: 7.5
-      inSlope: 2
-      outSlope: 2
+      time: 2.6529238
+      value: 28.027355
+      inSlope: 0.7931453
+      outSlope: 0.7931453
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5.5732946
+      value: 29.54686
+      inSlope: 1.6302902
+      outSlope: 1.6302902
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 8.499634
+      value: 35.48198
+      inSlope: -0.034556396
+      outSlope: -0.034556396
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08045108
       outWeight: 0
     - serializedVersion: 3
-      time: 10
-      value: 15
+      time: 12.145148
+      value: 40.03691
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -127,11 +146,23 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   startingDifficulty: 10
-  pointsPerMash: 5
+  pointsPerMash: 15
   maxPoints: 1000
   difficulty: 10
   mashPoints: 500
   endTime: 15
+--- !u!114 &114694197035624864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404134539306386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98af403b55567584e927e794868947e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &114747010392801558
 MonoBehaviour:
   m_ObjectHideFlags: 1
