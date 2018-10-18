@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(ButtonMash))]
 [RequireComponent(typeof(GoalCompletion))]
 [RequireComponent(typeof(Bugs))]
+[RequireComponent(typeof(StartGameMode))]
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     private ButtonMash bm;
     private GoalCompletion gc;
     private Bugs b;
+    private StartGameMode sgm;
 
     void Awake()
     {
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
         bm = GetComponent<ButtonMash>();
         gc = GetComponent<GoalCompletion>();
         b = GetComponent<Bugs>();
+        sgm = GetComponent<StartGameMode>();
     }
 
     public Player Player() { return p; }
@@ -52,4 +55,5 @@ public class GameManager : MonoBehaviour
     public ButtonMash ButtomMash() { return bm; }
     public GoalCompletion GoalCompletion() { return gc; }
     public Bugs Bugs() { return b; }
+    public StartGameMode StartGameMode() { return sgm; }
 }

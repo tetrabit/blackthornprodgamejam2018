@@ -23,6 +23,8 @@ public class PixelGrid : MonoBehaviour
     private Pixel[,] pixels;
     private Pixel[] colorPicker;
 
+    private bool runUpdate;
+
     public enum Colors
     {
         Black,
@@ -48,28 +50,42 @@ public class PixelGrid : MonoBehaviour
         amountOfColors = System.Enum.GetNames(typeof(Colors)).Length;
         if(StartOnLoad)
         {
-            SpawnPixelGrid();
-            SpawnColorPicker();
-            Resize();
+            Init();
         }
 	}
 
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(runUpdate)
         {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit))
+            if (Input.GetMouseButton(0))
             {
-                if (rayHit.collider.tag == "PixelCube")
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit))
                 {
-                    FindCube(rayHit.collider.gameObject);
-                }
-                if (rayHit.collider.tag == "ColorPicker")
-                {
-                    PickColor(rayHit.collider.gameObject);
+                    if (rayHit.collider.tag == "PixelCube")
+                    {
+                        FindCube(rayHit.collider.gameObject);
+                    }
+                    if (rayHit.collider.tag == "ColorPicker")
+                    {
+                        PickColor(rayHit.collider.gameObject);
+                    }
                 }
             }
         }
+    }
+
+    public void StartGame()
+    {
+        Init();
+        runUpdate = true;
+    }
+
+    private void Init()
+    {
+        SpawnPixelGrid();
+        SpawnColorPicker();
+        Resize();
     }
 
     public void SpawnPixelGrid()

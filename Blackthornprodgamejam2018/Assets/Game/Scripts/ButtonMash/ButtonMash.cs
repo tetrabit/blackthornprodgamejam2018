@@ -32,7 +32,9 @@ public class ButtonMash : MonoBehaviour
 	void Start () 
 	{
         if (startOnLoad)
+        {
             Init(mashBar);
+        }
 	}
 	
 	void Update () 
@@ -46,10 +48,17 @@ public class ButtonMash : MonoBehaviour
                 UpdateBar();
                 CheckForFailure();
                 IncreaseDifficulty();
+                IncrementTime();
             }
-            IncrementTime();
         }
 	}
+
+    public void StartGame()
+    {
+        runUpdate = true;
+        Init(mashBar);
+        mashBar.SetActive(true);
+    }
 
     public void Init()
     {
