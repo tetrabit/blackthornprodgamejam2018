@@ -413,11 +413,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114892133736771654, guid: df432f9eba6d7ba4e803063c34f92682,
-        type: 2}
-      propertyPath: pixelGridOrigin
-      value: 
-      objectReference: {fileID: 944116030}
     - target: {fileID: 114538277161225412, guid: df432f9eba6d7ba4e803063c34f92682,
         type: 2}
       propertyPath: mashBar
@@ -428,16 +423,11 @@ Prefab:
       propertyPath: mashBarOrigin
       value: 
       objectReference: {fileID: 1787061258}
-    - target: {fileID: 114538277161225412, guid: df432f9eba6d7ba4e803063c34f92682,
+    - target: {fileID: 114892133736771654, guid: df432f9eba6d7ba4e803063c34f92682,
         type: 2}
-      propertyPath: startOnLoad
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114694197035624864, guid: df432f9eba6d7ba4e803063c34f92682,
-        type: 2}
-      propertyPath: anim
+      propertyPath: pixelGridOrigin
       value: 
-      objectReference: {fileID: 131605479}
+      objectReference: {fileID: 944116030}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df432f9eba6d7ba4e803063c34f92682, type: 2}
   m_IsPrefabAsset: 0

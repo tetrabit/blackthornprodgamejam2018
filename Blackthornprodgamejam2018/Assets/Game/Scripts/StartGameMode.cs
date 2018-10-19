@@ -25,7 +25,7 @@ public class StartGameMode : MonoBehaviour
                 GameManager.instance.ButtomMash().StartGame();
                 break;
             case (CurrentGame.PixelGrid):
-                GameManager.instance.ButtomMash().StartGame();
+                GameManager.instance.PixelGrid().StartGame();
                 break;
             case (CurrentGame.MetaGame):
                 break;

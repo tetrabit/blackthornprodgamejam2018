@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cad1e3610f6b954db3a3609314d5817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOnLoad: 1
+  startOnLoad: 0
   mashBar: {fileID: 0}
   mashBarOrigin: {fileID: 0}
   difficultyRamp:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98af403b55567584e927e794868947e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  currentGame: 1
 --- !u!114 &114747010392801558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca9e6a802651e14480c28d0e1b678a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartOnLoad: 0
+  StartOnLoad: 1
   pixelCube: {fileID: 1859428559025590, guid: 552ae8e4f00bd884bb06c2fae30164a5, type: 2}
   pixelGridOrigin: {fileID: 0}
-  gridX: 12
+  gridX: 16
   gridY: 16
