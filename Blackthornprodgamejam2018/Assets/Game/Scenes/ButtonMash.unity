@@ -428,6 +428,16 @@ Prefab:
       propertyPath: pixelGridOrigin
       value: 
       objectReference: {fileID: 944116030}
+    - target: {fileID: 114694197035624864, guid: df432f9eba6d7ba4e803063c34f92682,
+        type: 2}
+      propertyPath: currentGame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892133736771654, guid: df432f9eba6d7ba4e803063c34f92682,
+        type: 2}
+      propertyPath: StartOnLoad
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df432f9eba6d7ba4e803063c34f92682, type: 2}
   m_IsPrefabAsset: 0

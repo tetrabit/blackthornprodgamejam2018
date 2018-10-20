@@ -9,6 +9,7 @@ public class PixelGrid : MonoBehaviour
 
     public GameObject pixelCube;
     public Transform pixelGridOrigin;
+    public GameObject saveButton;
 
     public int gridX, gridY;
 
@@ -29,14 +30,14 @@ public class PixelGrid : MonoBehaviour
     public enum Colors
     {
         Grey,
-        DarkBlue,
-        LightBlue,
         DarkGreen,
         LightGreen,
         DarkRed,
         LightRed,
         Pink,
         Yellow,
+        DarkBlue,
+        LightBlue,
         White,
         Black
     }
@@ -59,13 +60,13 @@ public class PixelGrid : MonoBehaviour
         public int x;
         public int y;
         public SpriteName sn;
-        public Sprite sprite;
+        public GameObject sprite;
         public Pixel[,] pixel;
     }
 
-    public int[,] nautCheck  = { { 0,0,4,4,4,0,0,0,0,0,0,0 }, {0,0,0,0,4,0,4,4,4,0,0,0}, {4,4,4,4,3,4,4,8,4,0,0,3}, {0,0,4,3,4,4,4,8,4,3,3,3}, {4,4,3,4,4,4,4,8,4,0,0,3}, {0,0,0,0,4,0,4,8,4,0,0,8}, {0,0,4,4,4,0,0,0,0,0,0,0} };
-    public int[,] eyeCheck = { { 0,0,0,7,9,9,9,9,0,0,0 }, { 0,0,9,9,5,5,5,9,7,0,0 }, { 0, 9, 9, 5, 6, 6, 6, 5, 9, 9, 0 }, { 9, 9, 5, 6, 6, 10, 6, 6, 5, 9, 9 }, { 9, 9, 5, 6, 10, 10, 10, 6, 5, 9, 9 }, { 9, 9, 5, 6, 6, 10, 6, 6, 5, 9, 9 }, { 9, 7, 9, 5, 6, 6, 6, 5, 9, 7, 9 }, { 7, 9, 9, 9, 5, 5, 5, 9, 9, 9, 7 }, { 0, 9, 9, 9, 9, 9, 9, 7, 9, 9, 0 }, { 0, 0, 9, 9, 9, 9, 7, 9, 9, 0, 0 }, { 0, 0, 0, 9, 9, 7, 9, 9, 0, 0, 0 } };
-    public int[,] eyeBallCheck = { { 0,0,0,7,9,9,9,9,0,0,0 }, { 0,0,9,9,1,1,1,9,7,0,0}, { 0,9,9,1,2,2,2,1,9,9,0}, {9,9,1,2,2,10,2,2,1,9,9}, {9,9,1,2,10,10,10,2,1,9,9}, {9,9,1,2,2,10,2,2,1,9,9}, {9,7,9,1,2,2,2,1,9,7,9}, {7,9,9,9,1,1,1,9,9,9,7}, {0,9,9,9,9,9,9,7,9,9,0}, {0,0,9,9,9,9,7,9,9,0,0}, {0,0,0,9,9,7,9,9,0,0,0} };
+    public int[,] nautCheck  =      { { 0,0,4,4,4,0,0,0,0,0,0,0 }, {0,0,0,0,4,0,4,4,4,0,0,0}, {4,4,4,4,3,4,4,8,4,0,0,3}, {0,0,4,3,4,4,4,8,4,3,3,3}, {4,4,3,4,4,4,4,8,4,0,0,3}, {0,0,0,0,4,0,4,8,4,0,0,8}, {0,0,4,4,4,0,0,0,0,0,0,0} };
+    public int[,] eyeCheck =        { { 0,0,0,7,9,9,9,9,0,0,0 }, { 0,0,9,9,5,5,5,9,7,0,0 }, { 0,9,9,5,6,6,6,5,9,9,0 }, { 9,9,5,6,6,10,6,6,5,9,9 }, { 9,9,5,6,10,10,10,6,5,9,9 }, { 9,9,5,6,6,10,6,6,5,9,9 }, { 9,7,9,5,6,6,6,5,9,7,9 }, { 7,9,9,9,5,5,5,9,9,9,7 }, { 0,9,9,9,9,9,9,7,9,9,0 }, { 0,0,9,9,9,9,7,9,9,0,0 }, { 0,0,0,9,9,7,9,9,0,0,0 } };
+    public int[,] eyeBallCheck =    { { 0,0,0,7,9,9,9,9,0,0,0 }, { 0,0,9,9,1,1,1,9,7,0,0 }, { 0,9,9,1,2,2,2,1,9,9,0 }, { 9,9,1,2,2,10,2,2,1,9,9 }, { 9,9,1,2,10,10,10,2,1,9,9 }, { 9,9,1,2,2,10,2,2,1,9,9 }, { 9,7,9,1,2,2,2,1,9,7,9 }, { 7,9,9,9,1,1,1,9,9,9,7 }, { 0,9,9,9,9,9,9,7,9,9,0 }, { 0,0,9,9,9,9,7,9,9,0,0 }, { 0,0,0,9,9,7,9,9,0,0,0 } };
 
     public DrawSprite[] drawSprite;
     
@@ -115,11 +116,14 @@ public class PixelGrid : MonoBehaviour
             if(drawSprite[i].sn == currentSprite)
             {
                 SpawnPixelGrid(drawSprite[i].x, drawSprite[i].y);
+                drawSprite[i].sprite.SetActive(true);
+
             }
         }
         SpawnColorPicker();
         Resize();
         runUpdate = true;
+        saveButton.SetActive(true);
     }
 
     public void SpawnPixelGrid()
